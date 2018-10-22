@@ -1,0 +1,29 @@
+{
+  "name": "atkinson_j_blue_e_av_app",
+  "version": "1.0.0",
+  "description": "audio video application",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "eslint": "^5.7.0",
+    "sass": "^1.14.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmaBlue/Atkinson_J_Blue_E_AV_App.git"
+  },
+  "author": "jacob atkinson and emma blue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmaBlue/Atkinson_J_Blue_E_AV_App/issues"
+  },
+  "homepage": "https://github.com/EmmaBlue/Atkinson_J_Blue_E_AV_App#readme"
+}
