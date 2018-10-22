@@ -50,6 +50,3 @@ And you’re done!
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT/).
 
-## Acknowledgments
-* Inspiration - [Faraday Future](https://www.ff.com/)
-
