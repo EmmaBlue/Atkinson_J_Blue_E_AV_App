@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
+//var pump = require('pump');
 
 //Start writing tasks
 //serve the page with browsersync
@@ -17,6 +18,16 @@ gulp.task('serve', function() {
 
   });
 
+});
+
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('lib/*.js'),
+        uglify(),
+        gulp.dest('dist')
+    ],
+    cb
+  );
 });
 
 // Compile Sass
