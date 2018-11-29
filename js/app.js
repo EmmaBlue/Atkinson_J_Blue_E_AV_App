@@ -35,15 +35,18 @@ const home = Vue.component('home-vue', {
     },
     template: `<section id="main-home">
         <section id="intro">
+            <h2 class="hidden">Intro Explanation</h2>
             <div v-on:click="showMedia">Movies</div>
             <div v-on:click="showMedia">TV</div>
             <div v-on:click="showMedia">Music</div>
         </section>
         <section id="select-profile">
+            <h2 class="hidden">Profile Section</h2>
             <div v-on:click="showAccount">Parents</div>
             <div v-on:click="showAccount">Kids</div>
         </section>
         <section id="select-year">
+            <h2 class="Pick Era</h2>
             <div v-on:click="showEra"><p>1950</p></div>
             <div v-on:click="showEra"><p>1960</p></div>
             <div v-on:click="showEra"><p>1970</p></div>
@@ -94,11 +97,13 @@ const home = Vue.component('home-vue', {
          <p>Trending</p>
         </section>
         <section id="parent-media-options">
+            <h2 class="hidden">Media Options</h2>
             <button v-on:click="parentMedia">Movies</button>
             <button v-on:click="parentMedia">TV</button>
             <button v-on:click="parentMedia">Music</button>
         </section>
         <section id="parent-media-grid">
+            <h2 class="hidden">Media Grid</h2>
             <section>
             </section>
             <section>
@@ -113,6 +118,7 @@ const home = Vue.component('home-vue', {
             </section>
         </section>
         <section id="favourites-sect">
+            <h2 class="hidden">Favourites Section</h2>
             <div class="slider" v-on:click="faveSlide"><p>Slider</p></div>
             <div id="favourite-view"><p>Main View</p></div>
             <div class="slider" v-on:click="faveSlide"><p>Slider</p></div>
@@ -158,14 +164,17 @@ const home = Vue.component('home-vue', {
     },
     template: `<section id="main-kids">
         <section v-on:click="trendSlide" id="trending">
+        <h2 class="hidden">Trending Section</h2>
          <p>Trending</p>
         </section>
         <section id="kid-media-options">
+            <h2 class="hidden">Kid Media Options</h2>
             <button v-on:click="parentMedia">Movies</button>
             <button v-on:click="parentMedia">TV</button>
             <button v-on:click="parentMedia">Music</button>
         </section>
         <section id="kid-media-grid">
+            <h2 class="hidden">Kid Media Section</h2>
             <section>
             </section>
             <section>
@@ -180,6 +189,7 @@ const home = Vue.component('home-vue', {
             </section>
         </section>
         <section id="favourites-sect">
+            <h2 class="hidden">Favourites Section</h2>
             <div class="slider" v-on:click="faveSlide"><p>Slider</p></div>
             <div id="favourite-view"><p>Main View</p></div>
             <div class="slider" v-on:click="faveSlide"><p>Slider</p></div>
