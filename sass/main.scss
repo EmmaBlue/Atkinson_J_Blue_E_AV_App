@@ -1,5 +1,23 @@
+@import 'modules/_variables';
+@import 'modules/_nav';
+
+
+
 body {
 
-    color:white; 
-    background-color: black;
+    color:black; 
+    background-color:white;
+    font-family: $reg-font;
+
+    h2 {
+
+        font-family: $heading-font;
+
+    }
+
+}
+
+.hidden {
+
+    display: none;
 }
