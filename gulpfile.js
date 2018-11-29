@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
-//var pump = require('pump');
+const uglify = require('gulp-uglify-js');
 
 //Start writing tasks
 //serve the page with browsersync
@@ -20,15 +20,9 @@ gulp.task('serve', function() {
 
 });
 
-gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('lib/*.js'),
-        uglify(),
-        gulp.dest('dist')
-    ],
-    cb
-  );
-});
+gulp.task('uglifyjs', () =>
+    uglify('./js')
+);
 
 // Compile Sass
 gulp.task('sass', function () {
@@ -49,5 +43,5 @@ gulp.task('sass:watch', function () {
 gulp.task('imagemin', () =>
     gulp.src('src/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('/images'))
 );
