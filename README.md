@@ -31,6 +31,10 @@ $ git clone https://github.com/EmmaBlue/Atkinson_J_Blue_E_AV_App.git
 
 $ cd Atkinson_J_Blue_E_AV_App
 
+# Install relevant node modules
+
+npm install 
+
 ```
 
 And you’re done!
