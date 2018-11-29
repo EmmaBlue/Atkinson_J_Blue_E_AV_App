@@ -46,7 +46,7 @@ const home = Vue.component('home-vue', {
             <div v-on:click="showAccount">Kids</div>
         </section>
         <section id="select-year">
-            <h2 class="Pick Era</h2>
+            <h2 class="Pick Era"</h2>
             <div v-on:click="showEra"><p>1950</p></div>
             <div v-on:click="showEra"><p>1960</p></div>
             <div v-on:click="showEra"><p>1970</p></div>
