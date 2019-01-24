@@ -1,18 +1,27 @@
 @import 'modules/_variables';
 @import 'modules/_nav';
-
+@import 'partials/_header';
+@import 'partials/_home';
+@import 'partials/_footer';
 
 
 body {
 
     color:black; 
-    background-color:white;
+    background-color: $white;
     font-family: $reg-font;
 
-    h2 {
+    h1, h2 {
 
         font-family: $heading-font;
+        letter-spacing: 1px;
 
+
+    }
+
+    p {
+
+        font-size: 0.85em;
     }
 
 }
@@ -20,4 +29,18 @@ body {
 .hidden {
 
     display: none;
+}
+
+.flex {
+
+    display: flex;
+}
+
+@media screen and (min-width: 600px) {
+
+    .flexTab {
+
+        display:flex;
+        
+    }
 }

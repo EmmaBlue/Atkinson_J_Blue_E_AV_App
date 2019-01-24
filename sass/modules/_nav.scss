@@ -10,7 +10,7 @@
     width: 2rem;
     position: fixed;
     top: 0rem;
-    right: 2rem;
+    left: 2rem;
     z-index: 2000;
     text-align: center;
     cursor: pointer;
@@ -106,8 +106,8 @@
   .nav_icon::before,
   .nav_icon::after {
     width: 2.5em;
-    height: 2px;
-    background-color: $dark-color;
+    height: 6px;
+    background-color: white;
     display: inline-block;
   }
   

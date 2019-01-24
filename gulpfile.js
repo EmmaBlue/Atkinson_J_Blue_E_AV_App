@@ -21,7 +21,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('uglifyjs', () =>
-    uglify('./js')
+    uglify('/js')
 );
 
 // Compile Sass

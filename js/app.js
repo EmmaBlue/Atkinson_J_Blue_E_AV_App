@@ -34,24 +34,27 @@ const home = Vue.component('home-vue', {
 
     },
     template: `<section id="main-home">
-        <section id="intro">
+        <section class="flex" id="intro">
             <h2 class="hidden">Intro Explanation</h2>
-            <div v-on:click="showMedia">Movies</div>
-            <div v-on:click="showMedia">TV</div>
-            <div v-on:click="showMedia">Music</div>
+            <section class="selectMedia" v-on:click="showMedia"><h2>MOVIES</h2></section>
+            <section class="selectMedia" v-on:click="showMedia"><h2>TV</h2></section>
+            <section class="selectMedia" v-on:click="showMedia"><h2>MUSIC</h2></section>
         </section>
         <section id="select-profile">
-            <h2 class="hidden">Profile Section</h2>
-            <div v-on:click="showAccount">Parents</div>
-            <div v-on:click="showAccount">Kids</div>
+            <h2>Select Profile</h2>
+            <section class="flex">
+                <section v-on:click="showAccount">Parents</section>
+                <section v-on:click="showAccount">Kids</section>
+            </section>
+            <button>More Info</button>
         </section>
         <section id="select-year">
             <h2 class="Pick Era"</h2>
-            <div v-on:click="showEra"><p>1950</p></div>
-            <div v-on:click="showEra"><p>1960</p></div>
-            <div v-on:click="showEra"><p>1970</p></div>
-            <div v-on:click="showEra"><p>1980</p></div>
-            <div v-on:click="showEra"><p>1990</p></div>
+            <button v-on:click="showEra"><p>1950</p></button>
+            <button v-on:click="showEra"><p>1960</p></button>
+            <button v-on:click="showEra"><p>1970</p></button>
+            <button v-on:click="showEra"><p>1980</p></button>
+            <button v-on:click="showEra"><p>1990</p></button>
         </section>
     </section>`
 
@@ -231,10 +234,10 @@ const home = Vue.component('home-vue', {
        data: {
         socItems: [
 
-            {link:"http://www.twitter.com", id: "twitter", class: "fab fa-twitter"},
             {link:"http://www.facebook.com", id: "facebook", class: "fab fa-facebook-square"},
-            {link:"http://www.instagram.com", id: "instagram", class: "fab fa-instagram"},
+            {link:"http://www.twitter.com", id: "twitter", class: "fab fa-twitter"},
             {link:"https://www.youtube.com/", id: "instagram", class: "fab fa-youtube"},
+            {link:"http://www.instagram.com", id: "instagram", class: "fab fa-instagram"},
 
           ]
       }, 
