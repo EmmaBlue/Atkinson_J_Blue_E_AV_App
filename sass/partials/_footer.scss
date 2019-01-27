@@ -1,11 +1,8 @@
 footer {
 
     background-color: $main-color;
-    position: absolute;
-    bottom: -5px;
-    right: 0px;
-    left: 0px;
-    width: 100%;
+    display: flex;
+    justify-content: left;
 
         .flexTab {
 
@@ -27,14 +24,27 @@ footer {
                     text-decoration: none;
                     color: $main-color;
                     font-size: 1.25em;
+
                 }
+
 
                 i {
 
                     background-color: white;
                     padding: 10px;
                     border-radius: 50%;
+                    transition: color 0.5s ease;
+
                 }
+
+                i:hover {
+
+        
+                    color: black;
+                    background-color: white;
+                }
+
+                
 
 
             } 
@@ -52,7 +62,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 600px) {
+/*@media screen and (min-width: 600px) {
 
     footer .flexTab p {
 
@@ -68,4 +78,4 @@ footer {
 
         margin: inherit;
     }
-}
+}*/

@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "eslint": "^5.7.0",
+    "lottie-web": "^5.4.3",
     "sass": "^1.14.2",
     "vue-router": "^3.0.2"
   },

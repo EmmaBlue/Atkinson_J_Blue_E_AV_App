@@ -5,7 +5,7 @@ const home = Vue.component('home-vue', {
 
         return {
 
-        
+            
         }
 
     },
@@ -30,31 +30,54 @@ const home = Vue.component('home-vue', {
             // `event` is the native DOM event
             console.log('showEra working!')
     
+         },
+
+         playMovie: function(event){
+            // `this` inside methods points to the Vue instance
+            // `event` is the native DOM event
+            console.log('Play Movie working!')
+            var animItem = bodymovin.loadAnimation({
+                wrapper: this,
+                animType: 'svg',
+                loop: true,
+                autoplay: true,
+                path : './data/movie.json'
+        
+        
+            });
+            animItem.play();
+    
          }
 
     },
     template: `<section id="main-home">
         <section class="flex" id="intro">
             <h2 class="hidden">Intro Explanation</h2>
-            <section class="selectMedia" v-on:click="showMedia"><h2>MOVIES</h2></section>
+            <section class="selectMedia" v-on:click="showMedia">
+                <div v-on:click="playMovie" id="movie"></div>
+                <h2>MOVIES</h2>
+            </section>
             <section class="selectMedia" v-on:click="showMedia"><h2>TV</h2></section>
             <section class="selectMedia" v-on:click="showMedia"><h2>MUSIC</h2></section>
         </section>
         <section id="select-profile">
-            <h2>Select Profile</h2>
+            <h2 class="profile-heading">SELECT PROFILE</h2>
             <section class="flex">
-                <section v-on:click="showAccount">Parents</section>
-                <section v-on:click="showAccount">Kids</section>
+                <section class="profile-but" v-on:click="showAccount">
+                    <h2 class="profile-title">Parents</h2>
+                </section>
+                <section class="profile-but" v-on:click="showAccount">
+                    <h2 class="profile-title">Kids</h2>
+                </section>
             </section>
-            <button>More Info</button>
+            <button class="info-but"><p>More Info</p></button>
         </section>
-        <section id="select-year">
-            <h2 class="Pick Era"</h2>
-            <button v-on:click="showEra"><p>1950</p></button>
-            <button v-on:click="showEra"><p>1960</p></button>
-            <button v-on:click="showEra"><p>1970</p></button>
-            <button v-on:click="showEra"><p>1980</p></button>
-            <button v-on:click="showEra"><p>1990</p></button>
+        <section class="grid_era">
+                <button class="eraBut" v-on:click="showEra"><p>1950</p></button>
+                <button class="eraBut" v-on:click="showEra"><p>1960</p></button>
+                <button class="eraBut" v-on:click="showEra"><p>1970</p></button>
+                <button class="eraBut" v-on:click="showEra"><p>1980</p></button>
+                <button class="eraBut" v-on:click="showEra"><p>1990</p></button>
         </section>
     </section>`
 
