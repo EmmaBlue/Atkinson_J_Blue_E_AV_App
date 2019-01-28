@@ -119,29 +119,33 @@ const home = Vue.component('home-vue', {
 
     },
     template: `<section id="main-parents">
-        <section v-on:click="trendSlide" id="trending">
-         <p>Trending</p>
-        </section>
+        <h2 class="profile-heading">PARENTS</h2>
+            <section class="displayed-movie">
+                <h2 class="hidden">Movie Image</h2>
+            </section>
+            <section class="flex">
+                    <h2 class="hidden">Individual Movie Info</h2>
+                    <img src="images/thumbsdown.svg" alt="Thumbs Down Rating">
+                    <img src="images/thumbsup.svg" alt="Thumbs Up Rating">
+                    <h2 class="media-title">Title of Movie </h2>
+                    <img src="images/star.svg" alt="Favourite">
+                    <img src="#" alt="Comment">
+            </section>
         <section id="parent-media-options">
             <h2 class="hidden">Media Options</h2>
-            <button v-on:click="parentMedia">Movies</button>
-            <button v-on:click="parentMedia">TV</button>
-            <button v-on:click="parentMedia">Music</button>
+            <button v-on:click="parentMedia" class="info-but"><p>MOVIES</p></button>
+            <button v-on:click="parentMedia" class="info-but"><p>TV</p></button>
+            <button v-on:click="parentMedia" class="info-but"><p>MUSIC</p></button>
         </section>
-        <section id="parent-media-grid">
+        <section  id="parent-media-grid">
             <h2 class="hidden">Media Grid</h2>
-            <section>
-            </section>
-            <section>
-            </section>
-            <section>
-            </section>
-            <section>
-            </section>
-            <section>
-            </section>
-            <section>
-            </section>
+            <section class="image-teaser"></section>
+            <section class="image-teaser"></section>
+            <section class="image-teaser"></section>
+            <section class="image-teaser"></section>
+            <section class="image-teaser"></section>
+            <section class="image-teaser"></section>
+        
         </section>
         <section id="favourites-sect">
             <h2 class="hidden">Favourites Section</h2>
